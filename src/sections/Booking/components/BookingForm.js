@@ -18,14 +18,14 @@ function BookingForm({ productData, setProductData }) {
 
     const updateObject = (event) => {
         const name = event.target.name;
-        let objCopy = Object.assign({}, productData);
+        let objCopy = JSON.parse(JSON.stringify(productData))
         objCopy.roomServices[name] = !productData.roomServices[name];
         setProductData(objCopy);
     };
 
     const updateActivities = (event) => {
         const name = event.target.name;
-        let objCopy = Object.assign({}, productData);
+        let objCopy = JSON.parse(JSON.stringify(productData))
         objCopy.spaActivities.includes(name)
             ? (objCopy.spaActivities = objCopy.spaActivities.filter(
                   (element) => element !== name

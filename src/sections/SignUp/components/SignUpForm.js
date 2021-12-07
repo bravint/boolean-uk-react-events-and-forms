@@ -26,7 +26,7 @@ const SignUpForm = () => {
 
     return (
         <form className="form-stack" onSubmit={handleSubmit}>
-            <label for="firstName">First Name</label>
+            <label htmlFor="firstName">First Name</label>
             <input
                 type="text"
                 id="firstName"
@@ -34,7 +34,7 @@ const SignUpForm = () => {
                 value={userData.firstName}
                 onChange={handleChange}
             />
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
                 type="email"
                 id="email"
@@ -42,7 +42,7 @@ const SignUpForm = () => {
                 value={userData.email}
                 onChange={handleChange}
             />
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input
                 type="password"
                 id="password"
@@ -58,7 +58,7 @@ const SignUpForm = () => {
                     value={userData.terms}
                     onChange={handleChange}
                 />
-                <label for="terms">I accept Terms and Conditons</label>
+                <label htmlFor="terms">I accept Terms and Conditons</label>
             </div>
             <button type="submit">Sign Up</button>
         </form>
