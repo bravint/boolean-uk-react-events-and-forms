@@ -1,15 +1,12 @@
 import React from "react";
 
 function BookingForm({ productData, setProductData }) {
-    console.log(productData);
-
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(productData);
     };
 
     const handleChange = (event) => {
-        console.log(event);
         if (event.target.type === "datetime-local")
             setProductData({ ...productData, date: event.target.value });
         if (event.target.name === "pool") updateActivities(event);
