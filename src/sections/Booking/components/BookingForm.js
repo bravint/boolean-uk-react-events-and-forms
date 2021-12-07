@@ -19,7 +19,7 @@ function BookingForm({ productData, setProductData }) {
     const updateObject = (event) => {
         const name = event.target.name;
         let objCopy = JSON.parse(JSON.stringify(productData));
-        objCopy.roomServices[name] = !productData.roomServices[name];
+        objCopy.roomServices[name] = event.target.checked;
         setProductData(objCopy);
     };
 
